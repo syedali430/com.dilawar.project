@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.dilawar.project.com.dilawar.project.model.StudentModel"
+		table="Student">
+
+		<meta attribute="class-description">
+			This class contains the Student detail.
+		</meta>
+
+		<id name="studentId" type="long" column="STUDENT_ID">
+			<generator class="increment" />
+		</id>
+
+		<property name="studentName" column="STUDENT_NAME" />
+		<property name="studentEmail" column="STUDENT_EMAIL" />
+
+
+	</class>
+</hibernate-mapping>

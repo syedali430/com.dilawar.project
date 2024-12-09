@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class
+		name="com.dilawar.project.com.dilawar.project.model.BookAllocationModel"
+		table="Book_Allocation">
+
+		<meta attribute="class-description">
+			This class contains the Book Allocation details.
+		</meta>
+
+		<!-- Primary Key -->
+		<id name="primaryId" type="long" column="PRIMARY_ID">
+			<generator class="increment" />
+		</id>
+
+		<!-- Many-to-One relationship with StudentModel -->
+		<many-to-one name="student"
+			class="com.dilawar.project.com.dilawar.project.model.StudentModel"
+			column="STUDENT_ID" not-null="true" />
+
+		<!-- Many-to-One relationship with BookModel -->
+		<many-to-one name="book"
+			class="com.dilawar.project.com.dilawar.project.model.BookModel"
+			column="BOOK_ID" not-null="true" />
+
+		<!-- Simple Property Mappings -->
+		<property name="startDate" column="START_DATE" type="string"
+			not-null="true" />
+		<property name="endDate" column="END_DATE" type="string"
+			not-null="false" />
+
+		<property name="bookStatus" column="Book_Status" type="string"
+			not-null="true" />
+
+
+	</class>
+</hibernate-mapping>

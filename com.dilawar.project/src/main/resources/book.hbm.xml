@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.dilawar.project.model.BookModel" table="Book">
+
+		<meta attribute="class-description">
+			This class contains the Book detail.
+		</meta>
+
+		<id name="bookId" type="int" column="BOOK_ID">
+			<generator class="increment" />
+		</id>
+
+		<property name="name" column="NAME" />
+		<property name="publisher" column="PUBLISHER" />
+		<property name="category" column="CATEGORY" />
+
+
+	</class>
+</hibernate-mapping>

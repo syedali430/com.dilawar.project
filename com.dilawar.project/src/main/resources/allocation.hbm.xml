@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+	<class name="com.dilawar.project.model.BookModel" table="Book">
+
+		<meta attribute="class-description">
+			This class contains the Book detail.
+		</meta>
+
+		  <id name="primaryId" type="int" column="PRIMARY_ID">
+            <generator class="increment"/>
+        </id>
+
+<property name="studentId" type="int" column="STUDENT_ID"/>
+
+        <!-- Foreign Key to Book ID -->
+        <property name="bookId" type="int" column="BOOK_ID"/>
+
+        <!-- Start Date of Book Allocation -->
+        <property name="startDate" type="date" column="START_DATE"/>
+
+        <!-- End Date of Book Allocation -->
+        <property name="endDate" type="date" column="END_DATE"/>
+
+        <!-- Status Enum Mapping -->
+        <property name="status" type="string" column="STATUS"/>
+
+	</class>
+</hibernate-mapping>
